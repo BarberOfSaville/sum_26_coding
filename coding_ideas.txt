@@ -1,0 +1,7 @@
+1. Program to quantify a garden site's "Connectedness" based on its bee community
+
+2. program to generate a bespoke infographic for each garden site about their bee species
+
+3. program to correlate garden factors with bee diversity
+
+4. program to generate maps of my sites 
