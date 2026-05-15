@@ -1,0 +1,6 @@
+PROJECT GOALS
+
+- Learn computational concepts and quickly apply them to real ecological data.
+- Become proficient in computational techniques like Python, R, QGIS, and SQL
+- gradually construct a computational portfolio. 
+- build a foundation that will lead me toward success in my dissertation research.
