@@ -89,3 +89,44 @@ user_0 = {
 for key, value in user_0.items():
     print("Key: " + key)
     print("Value: " + value)
+
+for name, language in favorite_languages.items():
+    print(name.title() + "'s favorite language is " +
+          language.title() + ".")
+    
+#loop through all keys (note that it's .keys, not .items)
+for name in favorite_languages.keys(): 
+    print(name.title())
+
+#this is the default method when looping through a dictionary
+#keys() just makes your code easier to read
+for name in favorite_languages:
+    print(name)
+
+#looping through dictionary looking for certain keys
+friends = ["angelica", "obi"]
+for name in favorite_languages.keys():
+    print(name.title())
+
+    if name in friends:
+        print("Hi " + name.title() + 
+              ", I see your favorite language is " +
+              favorite_languages[name].title() + "!!")
+        
+if "erin" not in favorite_languages.keys():
+    print("Erin, please take our poll!")
+
+#looping through a dictionary's keys in order
+#can use the sorted() function toward this end
+for name in sorted(favorite_languages.keys()):
+    print(name.title() + ", we appreciate you taking the poll.")
+
+#looping through all the values in a dictionary
+print("The following languages have been mentioned:")
+for language in favorite_languages.values():
+    print(language.title())
+
+#want to avoid repeats? Use a SET
+print("The following languages have been mentioned:")
+for language in set(favorite_languages.values()):
+    print(language.title())
