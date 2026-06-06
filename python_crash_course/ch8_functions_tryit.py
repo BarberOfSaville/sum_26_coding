@@ -47,3 +47,119 @@ def describe_city(city = "Reykjavik", country = "Iceland"):
 describe_city("New York", "USA")
 describe_city(city = "Melbourne", country = "Australia")
 describe_city("Tokyo", country = "Japan")
+
+
+#8-6: City Names
+def city_country(city = "New York", country = "United States"):
+    """Neatly prints a city and its country."""
+    city_country = city.title() + ", " + country.title()
+    print(city_country)
+
+city_country("munich", "germany")
+city_country("Yokohama", "japan")
+city_country("qUiTO", "ECUADOR")
+
+
+#8-7: Album
+def make_album(artist = "The Beatles", title = "Abbey Road", tracks = 0):
+    """Stores and artist and album title in a dictionary"""
+    if tracks != 0:
+        album = {"artist" : artist, "title" : title, "tracks" : tracks}
+    else:
+        album = {"artist" : artist, "title" : title}
+    return album
+
+make_album("Taylor Swift", "reputation", 8)
+make_album("Brian and the Savilles", "bird city")
+make_album("Billy Joel", "piano man")
+
+
+#8-8: User Albums
+while True:
+    print("Welcome! Name a musical artists.")
+    print("Enter 'q' to quit at any time.")
+    user_artist = input("Artist: ")
+
+    if user_artist == "q":
+        break
+
+    print("Now, name one of their albums.")
+    user_title = input("Enter 'q' to quit at any time. ")
+
+    if user_title == "q":
+        break
+
+    album_dictionary = make_album(user_artist, user_title)
+    print(album_dictionary)
+
+
+#8-9 Magicians
+def show_magicians(magician_roster):
+    """Prints the name of each magician in a list."""
+    for magician in magician_roster:
+        print("Pulling " + magician + " out of a hat!")
+
+magician_alliance = ["GOB Bluth", "Tony Wonder", "Uncle Magic", "Quopstromboli"]
+show_magicians(magician_alliance)
+
+
+#8-10: Great Magicians + 8-11: Unchanged Magicians
+def make_great (magician_roster):
+    """Adds 'the great' to the name of each magician in a list."""
+    magician_roster = [magician + " the Great"
+                       for magician in magician_roster]
+    return magician_roster
+
+great_alliance = make_great(magician_alliance)
+show_magicians(great_alliance)
+show_magicians(magician_alliance)
+
+#alternatively, can use ennumerate to modify the original list
+
+
+#8-12: Sandwiches
+def sandwich (*ingredients):
+    """Collects a list of ingredients and prints a summary of the sandwich."""
+    print("The customer would like a sandwich with the following ingredients:")
+    for ingredient in ingredients:
+        print("- " + ingredient)
+    print("\nSounds like a yummy sandwich!")
+
+sandwich("bacon", "lettuce", "tomato", "chicken", "mayo")
+
+
+#8-13: User profile
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing everything we know about a user"""
+    profile = {}
+    profile["first_name"] = first
+    profile["last name"] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile("brian", "saville", location = "new york",
+                             undergrad = "Holy Cross", grad = "Fordham", 
+                             high_school = "Regis")
+
+print(user_profile)
+
+
+#8-14: Cars
+def make_car(manufacturer, model_name, **car_info):
+    """Builds a dictionary of information about a car"""
+    car = {}
+    car["manufacturer"] = manufacturer
+    car["model"] = model_name
+    for key, value in car_info.items():
+        car[key] = value
+    return car
+
+car = make_car("subaru", "outback", color = "pink", tow_package = True)
+print(car)
+
+
+#8-16: Imports
+import is_stupid
+print(is_stupid.__file__)
+is_stupid.stupid("this", "that", "nintendo", "the government")
