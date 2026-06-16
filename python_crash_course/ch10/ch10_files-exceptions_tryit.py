@@ -46,23 +46,7 @@ while active:
 
     if guest_name == "q":
         active = False
-        print("All done adding names to the guest book!")
     else:
         guest_name = guest_name + "\n"
         with open("guest_book.txt", "a") as file_object:
             file_object.write(guest_name)
-
-
-#10-5: Programming Poll
-active = True
-while active:
-    print("Tell me one good reason why you like programming.")
-    reason = input("(When finished, enter 'done'.) ")
-
-    if reason == "done":
-        active = False
-        print("That's a good list of reasons!")
-    else:
-        reason = reason + "\n"
-        with open("why_i_love_programming.txt", "a") as file_object:
-            file_object.write(reason)
