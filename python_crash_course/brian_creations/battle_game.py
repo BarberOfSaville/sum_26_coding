@@ -166,7 +166,7 @@ while beast_health > 0:
         elif beast_action <= 6:
             print("\nThe beast takes a vicious bite!")
             beast_modifier = random.randrange(b_modifier_lower_limit, b_modifier_upper_limit)
-            beast_damage = round((beast_attack + beast_modifier) * 1.5)
+            beast_damage = round((beast_attack + beast_modifier) * 1.3)
 
             #reduce damage if the player defended
             if defend == True:

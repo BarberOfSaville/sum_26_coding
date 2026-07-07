@@ -50,3 +50,18 @@ while active:
         guest_name = guest_name + "\n"
         with open("guest_book.txt", "a") as file_object:
             file_object.write(guest_name)
+
+#(from this point on, I switched to doing these exercises in their own files)
+#10-6: Addition
+print("I am Addatron. Give me two numbers and I will add them.")
+number1 = input("Please enter a number: ")
+number2 = input("Please enter another number: ")
+
+#convert these numbers to integers
+int1 = int(number1)
+int2 = int(number2)
+
+#Add the numbers and provide the result
+answer = int1 + int2
+print(int1 + " plus " + int2 + " equals " + answer + "!!!")
+

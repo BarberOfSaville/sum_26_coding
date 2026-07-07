@@ -184,3 +184,7 @@ def count_words(filename):
         words = contents.split()
         num_words = len(words)
         print("The file " + filename + " has around " + str(num_words) + " words.")
+
+
+#STORING DATA
+#using json.dump() and json.load()
